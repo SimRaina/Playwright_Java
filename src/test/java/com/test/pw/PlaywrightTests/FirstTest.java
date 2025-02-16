@@ -4,8 +4,8 @@ import com.microsoft.playwright.*;
 
 public class FirstTest {
     public static void main(String[] args) {
-        try (Playwright playwright = Playwright.create()) {
-            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+         	Playwright playwright = Playwright.create();
+         	Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
             		.setHeadless(false).setSlowMo(50));
             
             Page page = browser.newPage();
@@ -13,5 +13,4 @@ public class FirstTest {
             System.out.println(page.title());
           
         }
-    }
 }
